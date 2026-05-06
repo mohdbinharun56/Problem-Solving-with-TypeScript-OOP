@@ -11,21 +11,21 @@ const reverseString = (reverseString: string): string => {
     for(let i = reverseString.length -1; i>=0; i--){
         reversed+= reverseString[i]
     }
-    return reversed;
+    return `"${reversed}";`;
 }
 
 // Problem 3
 
  type StringOrNumber  = string | number;
 
- const checkType = (input: StringOrNumber): "String" | "Number" =>{
-    return typeof input === "string" ? "String" : "Number";
+ const checkType = (input: StringOrNumber): `"String";` | `"Number";` =>{
+    return typeof input === "string" ? `"String";` : `"Number";`;
  }
 
 //  Problem 4
 
 const getProperty =<T,K extends keyof T>(object: T,key: K)=>{
-    return object[key]; 
+    return `"${object[key]}";`; 
 }
 
 // Problem 5
@@ -61,7 +61,7 @@ class Student extends Person{
     }
 
     getDetails (){
-        return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+        return `"Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}";`;
     }
 }
 
