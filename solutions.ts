@@ -17,8 +17,12 @@ const reverseString = (reverseString: string): string => {
 // Problem 3
  type StringOrNumber  = string | number;
 
- const checkType = (input: StringOrNumber): StringOrNumber =>{
-    return typeof input === "string" ? "string" : "number";
+ const checkType = (input: StringOrNumber): "String" | "Number" =>{
+    return typeof input === "string" ? "String" : "Number";
  }
 
- 
+//  Problem 4
+
+const getProperty =<T,K extends keyof T>(object: T,key: K)=>{
+    return object[key]; 
+}
