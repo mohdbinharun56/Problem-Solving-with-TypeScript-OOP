@@ -26,3 +26,15 @@ const reverseString = (reverseString: string): string => {
 const getProperty =<T,K extends keyof T>(object: T,key: K)=>{
     return object[key]; 
 }
+
+// Problem 5
+
+interface Book{
+    title: string;
+    author: string;
+    publishedYear: number;
+}
+
+const toggleReadStatus = (book: Book) =>{
+    return  {...book, isRead: true}
+}
