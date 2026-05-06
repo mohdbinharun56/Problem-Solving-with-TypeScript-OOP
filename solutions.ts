@@ -15,6 +15,7 @@ const reverseString = (reverseString: string): string => {
 }
 
 // Problem 3
+
  type StringOrNumber  = string | number;
 
  const checkType = (input: StringOrNumber): "String" | "Number" =>{
