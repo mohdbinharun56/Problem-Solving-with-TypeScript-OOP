@@ -14,3 +14,11 @@ const reverseString = (reverseString: string): string => {
     return reversed;
 }
 
+// Problem 3
+ type StringOrNumber  = string | number;
+
+ const checkType = (input: StringOrNumber): StringOrNumber =>{
+    return typeof input === "string" ? "string" : "number";
+ }
+
+ 
